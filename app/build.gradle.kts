@@ -3,7 +3,9 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
+    id ("kotlin-parcelize")
 }
+
 
 android {
     namespace = "com.example.noteappmvvmroom"
@@ -52,8 +54,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     //Navigation Components
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.3.5")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.3.5")
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     //Room Database
     implementation ("androidx.room:room-runtime:2.3.0")
