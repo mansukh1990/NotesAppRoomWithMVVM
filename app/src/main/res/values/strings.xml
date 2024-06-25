@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NoteAppMvvmRoom</string>
+    <string name="todo">TODO</string>
+    <string name="notesdes">Life is too fast does not forget anything\njust note it!</string>
+    <string name="byman">By\n Your Mansukh Makwana Here</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
