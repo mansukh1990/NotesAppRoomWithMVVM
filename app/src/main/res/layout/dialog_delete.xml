@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <View
-        android:layout_width="80dp"
+        android:layout_width="50dp"
         android:layout_height="5dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
@@ -17,11 +17,12 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="Are you sure want to delete\nThis Note?"
         android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/dialogNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -34,11 +35,13 @@
         android:text="No" />
 
     <TextView
+        android:id="@+id/dialigYes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/yes_btn"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"

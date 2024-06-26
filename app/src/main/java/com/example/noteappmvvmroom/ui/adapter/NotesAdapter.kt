@@ -10,8 +10,14 @@ import com.example.noteappmvvmroom.databinding.ItemNotesBinding
 import com.example.noteappmvvmroom.model.Notes
 import com.example.noteappmvvmroom.ui.fragments.HomeFragmentDirections
 
-class NotesAdapter(val requireContext: Context, val notesList: List<Notes>) :
+class NotesAdapter(val requireContext: Context, var notesList: List<Notes>) :
     RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
+
+        fun filtering(newFilteredList: ArrayList<Notes>) {
+            notesList = newFilteredList
+            notifyDataSetChanged()
+
+        }
     class NotesViewHolder(val binding: ItemNotesBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
@@ -29,9 +35,9 @@ class NotesAdapter(val requireContext: Context, val notesList: List<Notes>) :
 
     override fun onBindViewHolder(holder: NotesViewHolder, position: Int) {
         val data = notesList[position]
-        holder.binding.notesTitle.text = data.title.toString()
-        holder.binding.notesSubTitle.text = data.subTitle.toString()
-        holder.binding.notesDate.text = data.date.toString()
+        holder.binding.notesTitle.text = data.title
+        holder.binding.notesSubTitle.text = data.subTitle
+        holder.binding.notesDate.text = data.date
 
         when (data.priority) {
             "1" -> {
