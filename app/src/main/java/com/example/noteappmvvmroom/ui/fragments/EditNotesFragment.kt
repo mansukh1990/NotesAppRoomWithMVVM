@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.noteappmvvmroom.R
 import com.example.noteappmvvmroom.databinding.FragmentEditNotesBinding
@@ -137,6 +138,7 @@ class EditNotesFragment : Fragment() {
 
             textViewYes?.setOnClickListener {
                 viewModel.deleteNotes(oldNotes.data.id!!)
+                findNavController().navigate(R.id.action_editNotesFragment_to_homeFragment)
                 bottomSheetDialog.dismiss()
             }
             textViewNo?.setOnClickListener {
@@ -148,4 +150,5 @@ class EditNotesFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
